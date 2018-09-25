@@ -6,12 +6,8 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    class Program
+    class Rose : Bush
     {
-        static void Main(string[] args)
-        {
-            Cactus cact = new Cactus();
-            cact.DoFotosintez();
-        }
+       
     }
 }

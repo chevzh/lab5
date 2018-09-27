@@ -8,6 +8,6 @@ namespace lab5
 {
     class Gladiolus : Flower
     {
-
+        
     }
 }

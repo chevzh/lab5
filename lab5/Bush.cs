@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,34 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    abstract class Bush : Flower
+    sealed class Bush : Bouqet
     {
-        public int size;
+        
+        public Bush(IEnumerable<Flower> flowers):base(flowers)
+        {
+           
+        }
+
+        public Bush() : base()
+        {
+
+        }
+
+        public override void Add(Flower flower)
+        {
+            if (_flowers.Any())
+            {
+                if (_flowers.Last().GetType() == flower.GetType())
+                {
+                    _flowers.Add(flower);
+                }
+            }
+            else
+            {
+                _flowers.Add(flower);
+            }
+        }
+
 
     }
 }

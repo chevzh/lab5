@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace lab5
 {
-    sealed class Paper
+    sealed class Paper : IPlant
     {
+        public void Grow()
+        {
+            Console.WriteLine("I'm already dead");
+        }
     }
 }

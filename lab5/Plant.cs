@@ -8,7 +8,7 @@ namespace lab5
 {
     interface  IPlant
     {
-         void DoFotosintez();
+        void Grow();
          
     }
 }

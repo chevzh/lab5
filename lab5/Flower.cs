@@ -28,5 +28,10 @@ namespace lab5
         {
             return String.Format("Тип объекта: {0}\nИмя: {1}\nЦвет: {2}", base.ToString(), Name, Color);
         }
+
+        public virtual void Bloom()
+        {
+            Console.WriteLine("Bloom");
+        }
     }
 }

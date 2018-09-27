@@ -11,7 +11,7 @@ namespace lab5
         public bool HasSpikes { get; set; } = true;
 
 
-        public Rose(string name = "Cactus", string color = "Green", bool hasSpikes = false) : base(name, color)
+        public Rose(string name = "Rose", string color = "Red", bool hasSpikes = true) : base(name, color)
         {
             HasSpikes = hasSpikes;
         }
@@ -30,6 +30,11 @@ namespace lab5
         public override string ToString()
         {
             return String.Format("{0} \nШипы: {1}", base.ToString(), HasSpikes.ToString());
+        }
+
+        public override void Bloom()
+        {
+            Console.WriteLine("Rose is blooming");
         }
 
     }

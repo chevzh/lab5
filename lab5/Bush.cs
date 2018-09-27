@@ -35,6 +35,10 @@ namespace lab5
             }
         }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
 
     }
 }

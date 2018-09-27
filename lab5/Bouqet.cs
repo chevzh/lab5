@@ -36,5 +36,10 @@ namespace lab5
             return _flowers.GetEnumerator();
         }
 
+        public override string ToString()
+        {
+            return string.Join("\n---------------\n" , this);
+        }
+
     }
 }

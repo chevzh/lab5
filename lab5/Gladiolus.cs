@@ -7,7 +7,26 @@ using System.Threading.Tasks;
 namespace lab5
 {
     class Gladiolus : Flower
-    {
+    {     
         
+        public Gladiolus(string name = "Gladiolus", string color = "Yellow") : base(name, color)
+        {
+            
+        }
+        
+        public override void Grow()
+        {
+            Console.WriteLine("Расту как цветок так скозатб");
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        public override void Bloom()
+        {
+            Console.WriteLine("Gladiolus is blooming");
+        }
     }
 }

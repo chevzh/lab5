@@ -21,6 +21,7 @@ namespace lab5
             return String.Format("{0}\nСъедобен: {1}", base.ToString(), CanEat);
         }
 
+
     }
     
 }

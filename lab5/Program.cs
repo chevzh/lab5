@@ -12,23 +12,44 @@ namespace lab5
         {
             Cactus cact = new Cactus();
             Rose rose = new Rose();
-            Bush b = new Bush() {rose,cact};
-
-            Bouqet bouqet = new Bouqet(b) { new Cactus()};
-
+            Gladiolus gladiolus = new Gladiolus();
+            Paper paper = new Paper();
             IPlant plant = new Rose();
 
+            Bush bush = new Bush() { rose, cact };
+            Bouqet bouqet = new Bouqet(bush) { new Cactus()};
+
+            Printer printer = new Printer();
+            
+            //работа с одноимёнными методами
             rose.Grow();
             ((IPlant)rose).Grow();
 
-            rose.Name = "Роза";
-            rose.Color = "Red";
-            
+            Printer.IsObjectOfClass(plant, typeof(IPlant));
 
-            foreach(var flower in bouqet)
+            //Работа с объектом Rose через ссылку на интерфейс IPlant
+            Printer.Print(plant);
+
+            //Вызывается метод Grow определённый в классе Rose для интерфейса IPlant
+            plant.Grow();
+            //Вызывается метод Grow() переопределённый в классе Rose(см. класс Flower)
+            rose.Bloom();
+
+            //Метод Bloom() нельзя вызвать, т.к. этот метод не определён в интерфейсе(это метод класса Flower)
+            //plant.Bloom();
+            ((Rose)plant).Bloom();
+
+
+            Printer.Print(bouqet);
+
+            object[] arr = new object[] { cact, rose, gladiolus, paper, plant, bush, bouqet, printer };
+            Console.WriteLine("Вывод информации о всех классах, определённых в лабе");
+            
+            foreach(var item in arr)
             {
-                Printer.Print(flower);
+                Printer.Print(item);
             }
+
         }
     }
 }

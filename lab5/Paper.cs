@@ -12,5 +12,11 @@ namespace lab5
         {
             Console.WriteLine("I'm already dead");
         }
+
+        public override string ToString()
+        {
+            return String.Format("I'm fucking dead! Get off!");
+        }
     }
+    
 }

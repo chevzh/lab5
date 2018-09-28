@@ -28,8 +28,18 @@ namespace lab5
 
         public static void Print(object obj)
         {
-            Console.WriteLine("---------------Print for "+ obj.GetType() + "---------------");
-            Console.WriteLine(obj.ToString());
+
+            IPlant plant = obj as IPlant;
+            if(plant as IPlant != null)
+            {
+                Print(plant);
+            }
+            else
+            {
+                Console.WriteLine("---------------Print for " + obj.GetType() + "---------------");
+                Console.WriteLine(obj.ToString());
+            }
+            
         }
 
     }
